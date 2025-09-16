@@ -8,13 +8,9 @@ public class RotateMatrix90 {
 
         int n = sc.nextInt();
         int[][] matrix = new int[n][n];
-
-        // input matrix
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 matrix[i][j] = sc.nextInt();
-
-        // Step 1: Transpose the matrix
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
                 int temp = matrix[i][j];
@@ -22,8 +18,6 @@ public class RotateMatrix90 {
                 matrix[j][i] = temp;
             }
         }
-
-        // Step 2: Reverse each row
         for (int i = 0; i < n; i++) {
             int left = 0, right = n - 1;
             while (left < right) {
@@ -34,8 +28,6 @@ public class RotateMatrix90 {
                 right--;
             }
         }
-
-        // print rotated matrix
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++)
                 System.out.print(matrix[i][j] + " ");
@@ -43,3 +35,4 @@ public class RotateMatrix90 {
         }
     }
 }
+
